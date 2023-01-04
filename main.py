@@ -33,6 +33,10 @@ while True:
         break
     response = bot.get_response(message)
     print(f'Bot: {response}')
+
+    #sentiment calculation
+    sentiment = calc_sentiment(response)
+    print(f'sentiment: {sentiment}')
 # training the bot via deep learning
 # memeory_trainer =  ChatterBotMemoryTrainer(bot)
 # memory_trainer.train()
@@ -40,5 +44,5 @@ while True:
 
 #gerating response from user input
 
-response = bot.get_response('Hi, how can i help you')
-print(response)
+# response = bot.get_response('Hi, how can i help you')
+# print(response)
