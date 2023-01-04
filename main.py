@@ -9,6 +9,12 @@ trainer = ChatterBotCorpusTrainer(bot)
 trainer.train('chatterbot.corpus.english.greetings',
             ' chatterbot.corpus.english.conversations')
 
+
+# training the bot via deep learning
+memeory_trainer =  ChatterBotMemoryTrainer(bot)
+memory_trainer.train()
+
+
 #gerating response from user input
 
 response = bot.get_response('Hi, how can i help you')
