@@ -11,5 +11,5 @@ trainer.train('chatterbot.corpus.english.greetings',
 
 #gerating response from user input
 
-response = bot.response('Hi, how can i help you')
+response = bot.get_response('Hi, how can i help you')
 print(response)
