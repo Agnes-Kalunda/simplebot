@@ -25,6 +25,14 @@ def calc_sentiment(message):
     else: 
         return 'neutral'
 
+#conditions for the running of the chatbot
+
+while True:
+    message = input('You')
+    if message == 'exit':
+        break
+    responsee = bot.get_response(message)
+    print(f'Bot: {response}')
 # training the bot via deep learning
 # memeory_trainer =  ChatterBotMemoryTrainer(bot)
 # memory_trainer.train()
