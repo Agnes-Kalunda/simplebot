@@ -1,6 +1,6 @@
 from chatterbot import ChatBot
 from chatterbot.trainers import ChatterBotCorpusTrainer
-
+from textblob import TextBlob
 bot = ChatBot('My Chatbot')
 
 #new chatbot trainer for the chatbot
@@ -10,9 +10,15 @@ trainer.train('chatterbot.corpus.english.greetings',
             ' chatterbot.corpus.english.conversations')
 
 
+
+#function to calculate sentiments of a message
+def calc_sentiment(message):
+    #using TextBlob for sentiment calculation
+    sentiment = TextBlob(message).sentiment.polarity
+
 # training the bot via deep learning
-memeory_trainer =  ChatterBotMemoryTrainer(bot)
-memory_trainer.train()
+# memeory_trainer =  ChatterBotMemoryTrainer(bot)
+# memory_trainer.train()
 
 
 #gerating response from user input
