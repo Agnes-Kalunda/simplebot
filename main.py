@@ -16,6 +16,15 @@ def calc_sentiment(message):
     #using TextBlob for sentiment calculation
     sentiment = TextBlob(message).sentiment.polarity
 
+    if sentiment > 0 :
+        return 'positive'
+
+    elif sentiment < 0:
+        return 'negative'
+
+    else: 
+        return 'neutral'
+
 # training the bot via deep learning
 # memeory_trainer =  ChatterBotMemoryTrainer(bot)
 # memory_trainer.train()
