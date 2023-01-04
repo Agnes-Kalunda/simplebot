@@ -8,4 +8,8 @@ trainer = ChatterBotCorpusTrainer(bot)
 
 trainer.train('chatterbot.corpus.english.greetings',
             ' chatterbot.corpus.english.conversations')
-            
+
+#gerating response from user input
+
+response = bot.response('Hi, how can i help you')
+print(response)
